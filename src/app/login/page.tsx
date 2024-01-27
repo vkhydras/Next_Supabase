@@ -1,5 +1,4 @@
 "use client";
-
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -45,8 +44,8 @@ export default function Login() {
       console.log(error);
 
       setSuccess(true);
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -64,31 +63,14 @@ export default function Login() {
         <div className="grid gap-4">
           <div className="grid">
             <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              value={data?.email}
-              onChange={handleChange}
-              className="text-black"
-            />
+            <input type="text" name="email" id="email" value={data?.email} onChange={handleChange} className="text-black"/>
           </div>
           <div className="grid">
             <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              value={data?.password}
-              onChange={handleChange}
-              className="text-black"
-            />
+            <input type="password" name="password" id="password" value={data?.password} onChange={handleChange} className="text-black"/>
           </div>
           <div>
-            <button
-              className="px-4 py-2 bg-blue-500 rounded cursor-pointer"
-              onClick={login}
-            >
+            <button className="px-4 py-2 bg-blue-500 rounded cursor-pointer" onClick={login}>
               Login
             </button>
           </div>
@@ -98,14 +80,7 @@ export default function Login() {
         <div className="grid gap-4">
           <div className="grid">
             <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              value={data?.email}
-              onChange={handleChange}
-              className="text-black"
-            />
+            <input type="text" name="email" id="email" value={data?.email} onChange={handleChange} className="text-black"/>
           </div>
           {success && (
             <div className="bg-green-100 text-green-600 px-2 rounded">
@@ -113,19 +88,13 @@ export default function Login() {
             </div>
           )}
           <div>
-            <button
-              className="px-4 py-2 bg-blue-500 rounded cursor-pointer"
-              onClick={sendResetPassword}
-            >
+            <button className="px-4 py-2 bg-blue-500 rounded cursor-pointer" onClick={sendResetPassword}>
               Reset my password
             </button>
           </div>
         </div>
       )}
-      <p
-        className="cursor-pointer hover:underline"
-        onClick={() => setResetPassword(!resetPassword)}
-      >
+      <p className="cursor-pointer hover:underline" onClick={() => setResetPassword(!resetPassword)}>
         {resetPassword ? "Login" : "Reset my password"}
       </p>
     </div>
