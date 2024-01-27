@@ -44,35 +44,17 @@ export default function Reset() {
     <div className="container mx-auto w-[400px] grid gap-4">
       <div className="grid">
         <label htmlFor="password">Enter your new password</label>
-        <input
-          type={showPassword ? "text" : "password"}
-          name="password"
-          id="password"
-          value={data?.password}
-          onChange={handleChange}
-        />
+        <input type={showPassword ? "text" : "password"} name="password" id="password" value={data?.password} onChange={handleChange}/>
       </div>
       <div className="grid">
         <label htmlFor="password">Confirm your new password</label>
-        <input
-          type={showPassword ? "text" : "password"}
-          name="confirmPassword"
-          id="password"
-          value={data?.confirmPassword}
-          onChange={handleChange}
-        />
+        <input type={showPassword ? "text" : "password"} name="confirmPassword" id="password" value={data?.confirmPassword} onChange={handleChange}/>
       </div>
-      <div
-        className="cursor-pointer hover:underline"
-        onClick={() => setShowPassword(!showPassword)}
-      >
+      <div className="cursor-pointer hover:underline" onClick={() => setShowPassword(!showPassword)}>
         <p className="text-sm">Show passwords</p>
       </div>
       <div>
-        <button
-          className="px-4 py-2 bg-blue-500 rounded cursor-pointer"
-          onClick={() => confirmPasswords()}
-        >
+        <button className="px-4 py-2 bg-blue-500 rounded cursor-pointer" onClick={() => confirmPasswords()}>
           Confirm
         </button>
       </div>

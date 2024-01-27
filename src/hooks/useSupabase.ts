@@ -15,16 +15,5 @@ import {
     const searchParams = useSearchParams();
     const pathname = usePathname();
   
-    return {
-      open,
-      setOpen,
-      active,
-      setActive,
-      pathname,
-      params,
-      router,
-      searchParams,
-      loading,
-      setLoading,
-    };
+    return {open, setOpen, active, setActive, pathname, params, router, searchParams, loading, setLoading,};
   };

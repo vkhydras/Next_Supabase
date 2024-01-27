@@ -21,10 +21,7 @@ export default function Home() {
         }
       )
     .subscribe();
-  
-   
-
-  
+    
   useEffect(() => {
     getArticles();
   }, []);

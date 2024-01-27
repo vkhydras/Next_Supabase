@@ -16,7 +16,6 @@ export const useVotes = () => {
  
 
   return {
-    votes,
-    getVotes
+    votes, getVotes
   };
 };

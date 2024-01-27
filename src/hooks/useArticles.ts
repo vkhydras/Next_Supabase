@@ -8,11 +8,10 @@ export const useArticles = () => {
 
       if (data) {
         console.log(data);
-        
-      setArticles(data);
-    } else {
+        setArticles(data);
+      } else {
       console.log(error);
-    }
+      }
     };
     const newVote = async (article_id: any, remove: boolean = false) => {
       const {
@@ -49,9 +48,5 @@ export const useArticles = () => {
 
  
 
-  return {
-    articles,
-      getArticles,
-    newVote
-  };
+  return { articles, getArticles, newVote};
 };

@@ -1,10 +1,5 @@
-import {
-    useParams,
-    usePathname,
-    useRouter,
-    useSearchParams,
-  } from "next/navigation";
-  import { useState } from "react";
+import { useParams, usePathname, useRouter, useSearchParams} from "next/navigation"
+  import { useState } from "react"
   
   export const useNavigation = () => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -15,16 +10,5 @@ import {
     const searchParams = useSearchParams();
     const pathname = usePathname();
   
-    return {
-      open,
-      setOpen,
-      active,
-      setActive,
-      pathname,
-      params,
-      router,
-      searchParams,
-      loading,
-      setLoading,
-    };
-  };
+    return { open, setOpen, active, setActive, pathname, params, router, searchParams, loading, setLoading,}
+  }
