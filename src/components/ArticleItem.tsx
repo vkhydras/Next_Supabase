@@ -1,6 +1,4 @@
 "use client";
-
-
 import IconsUp from "./icons/Up";
 import { useArticles } from "@/hooks/useArticles";
 

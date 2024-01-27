@@ -4,13 +4,13 @@ import { useState } from "react";
 export const useVotes = () => {
   const [votes, setVotes] = useState<any[]>([]);
   const getVotes = async () => {
-    const { data, error } = await supabase.from("votes").select("*"); //RLS Policies
+    const { data, error } = await supabase.from("votes").select("*"); 
 
-    if (data) {
+    if (data) 
       setVotes(data);
-    } else {
+     else 
       console.log(error);
-    }
+    
   };
 
  
